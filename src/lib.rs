@@ -1,4 +1,3 @@
-use hex;
 use serde::{Deserialize, Deserializer, Serialize, Serializer, de};
 use std::fmt;
 use std::ops::Deref;
@@ -81,7 +80,7 @@ impl Serialize for Txid {
     where
         S: Serializer,
     {
-        serializer.serialize_str(&hex::encode(&self.0))
+        serializer.serialize_str(&hex::encode(self.0))
     }
 }
 
