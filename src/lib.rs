@@ -67,7 +67,7 @@ impl CompactSize {
                 ]);
                 Ok((Self::new(val), 9))
             }
-            _ => Err(BitcoinError::InvalidFormat),
+            // _ => Err(BitcoinError::InvalidFormat),
         }
     }
 }
